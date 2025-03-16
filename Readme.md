@@ -4,7 +4,7 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/Health-App.git
+   git clone https://github.com/abhinavthedev/Health-App.git
    ```
 
 2. **Navigate to the backend**:
