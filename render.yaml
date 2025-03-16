@@ -1,11 +1,10 @@
 # render.yaml
 services:
   - type: web
-    name: health-app-backend  # Or whatever you want to name it
+    name: health-app-backend
     env: python
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: gunicorn --worker-tmp-dir /tmp app:app  # Assuming you use gunicorn, and app.py has 'app' as the flask app
-    rootDir: backend
+    startCommand: cd backend && gunicorn app:app
     envVars:
-      - key: GEMINI_API_KEY # Make sure you set this in Render's dashboard as a secure environment variable
-        value: YOUR_GEMINI_API_KEY
+      - key: GEMINI_API_KEY
+        sync: false  # This indicates it's a secret value that should be set in Render dashboard
