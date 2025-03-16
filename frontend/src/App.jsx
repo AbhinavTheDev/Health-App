@@ -1,10 +1,10 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Diagnostics from './components/Diagnostics.jsx';
-import ECommerce from './components/Ecommerce.jsx';
-import Consultation from './components/Consultation.jsx';
-import Index from './components/Index.jsx';
+import Diagnostics from './pages/Diagnostics.jsx';
+import ECommerce from './pages/Ecommerce.jsx';
+import Consultation from './pages/Consultation.jsx';
+import Index from './pages/Index.jsx';
 
 function App() {
   return (
