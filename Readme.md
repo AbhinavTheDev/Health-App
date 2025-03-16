@@ -21,7 +21,7 @@
    - Activate it:
      - **Windows**:
        ```cmd
-       .\env\Scripts\activate
+       env\Scripts\activate
        ```
      - **Linux/Mac**:
        ```bash
