@@ -1,6 +1,7 @@
-// frontend/src/components/ECommerce.js
 import React from 'react';
 import axios from 'axios';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
 
 function ECommerce() {
     const [recommendedProducts, setRecommendedProducts] = React.useState([]);
@@ -18,6 +19,7 @@ function ECommerce() {
 
     return (
         <div>
+            <Navbar />
             <h2>Skincare Recommendations</h2>
             <input
                 type="text"
@@ -33,6 +35,7 @@ function ECommerce() {
                     </li>
                 ))}
             </ul>
+            <Footer />
         </div>
     );
 }

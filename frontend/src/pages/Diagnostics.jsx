@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { jsPDF } from 'jspdf';
-
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
 function Diagnostics() {
     const [userInput, setUserInput] = React.useState('');
     const [diagnosticReport, setDiagnosticReport] = React.useState(null);
@@ -141,7 +142,7 @@ function Diagnostics() {
                     }
                 `}
             </style>
-            
+            <Navbar />
             <h2>Diagnostic Report Generator</h2>
             <textarea
                 placeholder="Enter your symptoms or medical records"
@@ -168,6 +169,7 @@ function Diagnostics() {
                     <button onClick={exportToPDF}>Export to PDF</button>
                 </div>
             )}
+            <Footer />
         </div>
     );
 }
