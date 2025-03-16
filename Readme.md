@@ -4,7 +4,7 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/Health-App.git
+   git clone https://github.com/abhinavthedev/Health-App.git
    ```
 
 2. **Navigate to the backend**:
@@ -21,7 +21,7 @@
    - Activate it:
      - **Windows**:
        ```cmd
-       .\env\Scripts\activate
+       env\Scripts\activate
        ```
      - **Linux/Mac**:
        ```bash
@@ -35,7 +35,7 @@
 
 5. **Create .env file in your backend**:
    ```bash
-   # backend\.env
+   # backend/.env
 
    GEMINI_API_KEY= your gemini api key
    ```
