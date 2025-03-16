@@ -35,7 +35,7 @@
 
 5. **Create .env file in your backend**:
    ```bash
-   # backend/.env
+   # backend\.env
 
    GEMINI_API_KEY= your gemini api key
    ```
