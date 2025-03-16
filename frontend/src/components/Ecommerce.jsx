@@ -1,0 +1,40 @@
+// frontend/src/components/ECommerce.js
+import React from 'react';
+import axios from 'axios';
+
+function ECommerce() {
+    const [recommendedProducts, setRecommendedProducts] = React.useState([]);
+    const [userInput, setUserInput] = React.useState('');
+
+    const fetchRecommendedProducts = async () => {
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/api/skincare-recommendations', { userInput });
+            setRecommendedProducts(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    return (
+        <div>
+            <h2>Skincare Recommendations</h2>
+            <input
+                type="text"
+                placeholder="Enter your skin type and concerns"
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
+            />
+            <button onClick={fetchRecommendedProducts}>Get Recommendations</button>
+            <ul>
+                {recommendedProducts.map((product) => (
+                    <li key={product.product_name}>
+                        <a href={product.product_url}>{product.product_name}</a> - Price: ${product.price}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default ECommerce;
