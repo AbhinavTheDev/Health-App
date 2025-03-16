@@ -9,7 +9,7 @@ function ECommerce() {
 
     const fetchRecommendedProducts = async () => {
         try {
-            const response = await axios.post('http://127.0.0.1:5000/api/skincare-recommendations', { userInput });
+            const response = await axios.post('https://health-app-vc8s.onrender.com/api/skincare-recommendations', { userInput });
             setRecommendedProducts(response.data);
             console.log(response.data);
         } catch (error) {

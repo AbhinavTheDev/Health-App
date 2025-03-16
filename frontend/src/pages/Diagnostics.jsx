@@ -11,7 +11,7 @@ function Diagnostics() {
     const generateReport = async () => {
         try {
             setIsLoading(true);
-            const response = await axios.post('http://localhost:5000/api/generate-diagnostic-report', { userInput });
+            const response = await axios.post('https://health-app-vc8s.onrender.com/api/generate-diagnostic-report', { userInput });
             setDiagnosticReport(response.data);
         } catch (error) {
             console.error(error);

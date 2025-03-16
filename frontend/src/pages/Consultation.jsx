@@ -8,7 +8,7 @@ function Consultation() {
 
   const bookConsultation = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/book-consultation');
+      const response = await axios.post('https://health-app-vc8s.onrender.com/api/book-consultation');
       setConsultationStatus(response.data);
     } catch (error) {
       console.error(error);
